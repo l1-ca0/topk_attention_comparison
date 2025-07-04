@@ -148,6 +148,17 @@ paper ["Memory-efficient Transformers via Top-k Attention"](https://arxiv.org/pd
 | 8192    | 16.2x             | 11.0x                     |
 
 
+### Relative Error by k (Averaged Across Sequence Lengths)
+|   k   | This Repo | Author's Public Repo |
+|-------|----------------------------|-------------------------------|
+|   8   |        6.7                |         17.3                 |
+|  16   |        5.0                |         16.8                 |
+|  32   |        3.6                |         16.1                 |
+|  64   |        2.3                |         15.3                 |
+| 128   |        1.6                |         14.2                 |
+| 256   |        1.1                |         13.1                 |
+
+
 - Despite the memory savings, top-k attention still computes the full quadratic-cost QKᵀ product upfront, which usually results in higher compute time due to the overhead from topk and gather operations.
 
 
